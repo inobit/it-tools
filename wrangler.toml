@@ -1,0 +1,10 @@
+name = "it-tools"
+compatibility_date = "2025-04-01"
+
+# Cloudflare Pages 构建配置
+# 部署前自动执行构建命令
+[build]
+command = "pnpm install && pnpm build"
+
+# Pages 构建输出目录
+pages_build_output_dir = "./dist"

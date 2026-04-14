@@ -1,0 +1,16 @@
+# Cloudflare Pages HTTP 响应头配置
+
+# 静态资源长期缓存（带哈希的文件）
+/assets/*
+  Cache-Control: public, max-age=31536000, immutable
+
+# JS/CSS 文件长期缓存（Vite 构建后带哈希）
+/*.js
+  Cache-Control: public, max-age=31536000, immutable
+
+/*.css
+  Cache-Control: public, max-age=31536000, immutable
+
+# HTML 文件不缓存（确保总是获取最新版本）
+/index.html
+  Cache-Control: public, max-age=0, must-revalidate
